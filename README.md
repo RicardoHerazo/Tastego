@@ -1,55 +1,108 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# 🍽️ TasteGo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada en **React Native con Expo** para el descubrimiento de restaurantes típicos del departamento de Sucre, Colombia. Permite buscar restaurantes, ver menús, navegar hasta ellos con GPS, guardar favoritos y visualizar platos en realidad aumentada.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Características principales
 
-   ```bash
-   npm install
-   ```
+- 🎬 Splash animado y onboarding de bienvenida
+- 🔐 Registro e inicio de sesión con autenticación real (AsyncStorage)
+- 🏠 Pantalla de inicio con restaurantes destacados y categorías
+- 🔍 Búsqueda por restaurante y por plato
+- ❤️ Sistema de favoritos persistente
+- 🗺️ Mapa interactivo con OpenStreetMap + Leaflet (gratuito, sin API key)
+- 📍 Distancia y tiempo de entrega calculados con GPS real (fórmula Haversine)
+- 🚗 Navegación GPS hacia el restaurante (Google Maps / Apple Maps)
+- 📷 Vista de platos en Realidad Aumentada (expo-camera)
+- 👤 Perfil de usuario editable con cambio de contraseña
+- 🔔 Sistema de notificaciones
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🏗️ Tecnologías utilizadas
 
-In the output, you'll find options to open the app in a
+| Tecnología | Uso |
+|---|---|
+| React Native + Expo | Framework principal |
+| Expo Router | Navegación basada en archivos |
+| TypeScript | Tipado estático |
+| AsyncStorage | Persistencia de datos local |
+| Leaflet + OpenStreetMap | Mapa interactivo gratuito |
+| expo-location | GPS y cálculo de distancia real |
+| expo-camera | Vista de realidad aumentada |
+| react-native-webview | Renderizado del mapa |
+| Inter (Google Fonts) | Tipografía principal |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Estructura del proyecto
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🗺️ Restaurantes reales incluidos
 
+| Restaurante | Dirección | Teléfono |
+|---|---|---|
+| Llanera La 31 ✅ | Cl. 31 #14-219, Nuevo México | +57 301 5120013 |
+| Pardo Gastro Bar ✅ | Cra. 28A #23B-13, La Toscana | +57 304 3393333 |
+| Rancho Grande ✅ | Cl. 36 #34-366, Rancho Grande | +57 301 7541553 |
+
+---
+
+## ⚙️ Instalación y ejecución
+
+### Requisitos previos
+
+- Node.js instalado (v18 o superior)
+- Expo Go instalado en tu celular Android o iOS
+- Git instalado
+
+### Pasos
+
+**1. Clonar el repositorio**
 ```bash
-npm run reset-project
+git clone https://github.com/RicardoHerazo/Tastego.git
+cd Tastego
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**2. Instalar dependencias**
+```bash
+npm install
+```
 
-## Learn more
+**3. Instalar dependencias de Expo**
+```bash
+npx expo install expo-location expo-camera react-native-webview @react-native-async-storage/async-storage @react-native-picker/picker @expo-google-fonts/inter expo-font
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+**4. Ejecutar el proyecto**
+```bash
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**5. Abrir en el celular**
 
-## Join the community
+Escanea el código QR que aparece en la terminal con la app **Expo Go** disponible en:
+- [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
+- [Apple App Store](https://apps.apple.com/app/expo-go/id982107779)
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# Tastego
-App móvil de descubrimiento de restaurantes típicos de sucre
->>>>>>> 5670d9e95e25937bd2c094db69a63caa0e7ce60c
+## 🗄️ Persistencia de datos
+
+La app usa **AsyncStorage** para guardar localmente en el dispositivo:
+
+| Clave | Contenido |
+|---|---|
+| `tastego_users` | Lista de usuarios registrados |
+| `tastego_session` | Sesión activa del usuario |
+| `tastego_favs` | Restaurantes favoritos |
+
+---
+
+## 👨‍💻 Desarrollado por
+
+**Ricardo Herazo**
+Ingeniería de Sistemas
+2026
